@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SoftSell - Modern Landing Page
 
-## Getting Started
+A responsive, visually appealing landing page for a fictional company called 'SoftSell' that helps businesses sell their unused software licenses.
 
-First, run the development server:
+## Features Implemented
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Responsive Design**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   - Fully responsive layout that works on all device sizes
+   - Mobile-first approach with adaptive components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Modern UI Components**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   - Hero section with compelling headline and CTA
+   - Three-step process visualization
+   - Benefits section with icons
+   - Customer testimonials
+   - Contact form with validation
+   - Footer with navigation and social links
 
-## Learn More
+3. **Visual Enhancements**
 
-To learn more about Next.js, take a look at the following resources:
+   - Custom color palette:
+     - background: hsl(220 14% 95%)
+     - foreground: hsl(220 14% 10%)
+     - primary: hsl(142 72% 46%)
+     - primary-foreground: hsl(210 40% 98%)
+     - secondary: hsl(220 10% 90%)
+     - secondary-foreground: hsl(220 14% 10%)
+     - muted: hsl(210 40% 96%)
+     - muted-foreground: hsl(215 16% 47%)
+     - accent: hsl(210 40% 96%)
+     - accent-foreground: hsl(220 14% 10%)
+   - Custom Inter font integration
+   - Light/dark mode toggle
+   - Logo and favicon
+   - Subtle animations for enhanced user experience
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **SEO Optimization**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   - Proper meta tags
+   - Semantic HTML structure
+   - Optimized page title and description
+   - Open Graph tags for social sharing
 
-## Deploy on Vercel
+5. **Form Functionality**
+   - Client-side form validation
+   - Interactive form elements
+   - Success state after form submission
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Setup Instructions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository
+2. Install dependencies:
+   \`\`\`
+   pnpm install
+   \`\`\`
+3. Run the development server:
+   \`\`\`
+   pnpm dev
+   \`\`\`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Deployment
+
+This project can be easily deployed on Vercel:
+
+1. Push to GitHub
+2. Connect to Vercel
+3. Deploy

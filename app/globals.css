@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(220 14% 95%);
+  --foreground: hsl(220 14% 10%);
+
+  --primary: hsl(142 72% 46%);
+  --primary-foreground: hsl(210 40% 98%);
+
+  --secondary: hsl(220 10% 90%);
+  --secondary-foreground: hsl(220 14% 10%);
+
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215 16% 47%);
+
+  --accent: hsl(210 40% 96%);
+  --accent-foreground: hsl(220 14% 10%);
+
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(210 40% 98%);
+
+  --border: hsl(214 32% 91%);
+  --input: hsl(214 32% 91%);
+  --ring: hsl(142 72% 46%);
+
+  --bg-url: url(/assests/noise-light.webp);
+}
+
+.dark {
+  --background: hsl(220 14% 10%);
+  --foreground: hsl(210 40% 98%);
+
+  --primary: hsl(142 72% 46%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(220 10% 90%);
+  --secondary-foreground: hsl(220 14% 10%);
+
+  --muted: hsl(223 15% 17%);
+  --muted-foreground: hsl(215 20% 75%);
+
+  --accent: hsl(217 15% 25%);
+  --accent-foreground: hsl(210 40% 98%);
+
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+
+  --border: hsl(217 15% 20%);
+  --input: hsl(217 15% 20%);
+  --ring: hsl(142 72% 46%);
+
+  --bg-url: url(/assests/noise-dark.webp);
 }
 
 @theme inline {
+  /* Core palette */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Actions */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  /* Neutral tokens */
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-no-repeat bg-cover bg-background text-foreground transition;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.gradient-text {
+  @apply bg-gradient-to-r from-primary from-50% to-white bg-clip-text text-transparent;
+}
+
+.reveal {
+  @apply opacity-0 translate-y-[30px] transition-all duration-500;
+}
+
+.reveal.active {
+  @apply opacity-100 translate-y-0;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
 }
