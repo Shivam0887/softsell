@@ -36,10 +36,6 @@ export default function RootLayout({
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <ThemeProvider>
         <body
-          style={{
-            backgroundImage: "var(--bg-url)",
-            backgroundBlendMode: "hue",
-          }}
           className={`${inter.className} min-h-dvh antialiased flex flex-col`}
         >
           <Navbar />
